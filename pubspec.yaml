@@ -1,0 +1,63 @@
+name: marche_social_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  another_stepper: ^1.2.2
+  cached_network_image: ^3.3.1
+  country_code_picker: ^3.0.0
+  cupertino_icons: ^1.0.2
+  dropdown_button2: ^1.8.7
+  flutter:
+    sdk: flutter
+  flutter_slidable: ^0.6.0
+  flutter_svg: ^2.0.9
+  get: ^4.6.6
+  input_quantity: ^2.2.0
+  intl: ^0.19.0
+  pin_code_fields: ^8.0.1
+  smooth_page_indicator: ^1.1.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/fonts/
+
+  fonts:
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Outfit-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Outfit-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Outfit-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Outfit-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Outfit-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Outfit-Black.ttf
+          weight: 900
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/constants/app_images
+  filename: assets.dart
+  field_prefix: null
