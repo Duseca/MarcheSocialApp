@@ -3,8 +3,10 @@ import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/view/widget/custom_check_box.dart';
 import 'package:marche_social_app/view/widget/custom_drop_down.dart';
+import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_field.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
+import 'package:marche_social_app/view/widget/seller_color_selector.dart';
 import 'package:marche_social_app/view/widget/simple_app_bar.dart';
 
 class UploadProduct extends StatefulWidget {
@@ -100,9 +102,7 @@ class _UploadProductState extends State<UploadProduct> {
                 SizedBox(
                   height: 8,
                 ),
-                MyTextField(
-                  hint: 'Enter the color for your product',
-                ),
+                ColorSelectorWidget(),
                 richtext('Size'),
                 SizedBox(
                   height: 8,
@@ -134,6 +134,9 @@ class _UploadProductState extends State<UploadProduct> {
                     hint: 'Select the condition',
                     items: [],
                     onChanged: (Value) {}),
+                SizedBox(
+                  height: 8,
+                ),
                 MyText(text: 'Tags(keywords)'),
                 SizedBox(
                   height: 8,
@@ -193,6 +196,69 @@ class _UploadProductState extends State<UploadProduct> {
                       paddingLeft: 10,
                     )
                   ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 240,
+                      child: MyButton(
+                        radius: 50,
+                        onTap: () {},
+                        buttonText: '+ Add another option',
+                        fontColor: kBlueColor,
+                        backgroundColor: Colors.transparent,
+                        outlineColor: kBlueColor,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 200,
+                      child: MyButton(
+                        radius: 10,
+                        onTap: () {},
+                        buttonText: 'Upload Media',
+                        fontColor: KTertiaryColor,
+                        backgroundColor: kGrey2Color,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  children: [
+                    CustomCheckBox(
+                      isActive: false,
+                      onTap: () {},
+                      iscircle: true,
+                    ),
+                    MyText(
+                      text:
+                          'I agree to the terms and conditions for the Marche Social',
+                      paddingLeft: 10,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                MyButton(
+                  onTap: () {},
+                  buttonText: 'List Product',
+                  backgroundColor: kBlueColor,
+                  radius: 50,
                 )
               ],
             ),

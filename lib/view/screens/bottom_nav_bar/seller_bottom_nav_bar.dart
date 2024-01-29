@@ -4,6 +4,7 @@ import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/view/screens/cart/cart.dart';
 import 'package:marche_social_app/view/screens/discover/discover.dart';
 import 'package:marche_social_app/view/screens/home/home.dart';
+import 'package:marche_social_app/view/screens/seller/analytics/analytics.dart';
 import 'package:marche_social_app/view/screens/seller/notifications/notifications.dart';
 import 'package:marche_social_app/view/screens/scroll/reels.dart';
 import 'package:marche_social_app/view/screens/seller/add/upload_product.dart';
@@ -44,7 +45,7 @@ class _BottomNavBarState extends State<SellerBottomNavBar> {
       case 3:
         return Notifications();
       case 4:
-        return Cart();
+        return Analytics();
 
       default:
         return Container(); // Handle unknown index

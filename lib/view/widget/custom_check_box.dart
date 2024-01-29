@@ -42,7 +42,7 @@ class CustomCheckBox extends StatelessWidget {
             : Icon(
                 Icons.check,
                 size: 11,
-                color: kWhiteColor,
+                color: isActive == true ? KTertiaryColor : kWhiteColor,
               ),
       ),
     );
