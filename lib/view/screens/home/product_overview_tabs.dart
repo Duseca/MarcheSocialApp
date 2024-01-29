@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_fonts.dart';
+import 'package:marche_social_app/view/screens/home/comments.dart';
 import 'package:marche_social_app/view/screens/home/description.dart';
+import 'package:marche_social_app/view/screens/home/product_reviews.dart';
+import 'package:marche_social_app/view/screens/home/specs.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
 class ProductsOverviewTabs extends StatefulWidget {
@@ -23,9 +26,9 @@ class _ProductsOverviewTabsState extends State<ProductsOverviewTabs> {
 
   final List<Widget> tabBarView = [
     Description(),
-    MyText(text: 'text'),
-    MyText(text: 'text'),
-    MyText(text: 'text'),
+    Specs(),
+    Productreview(),
+    Comments()
   ];
   @override
   Widget build(BuildContext context) {

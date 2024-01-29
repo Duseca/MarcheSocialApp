@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/controller/onboarding1_controller.dart';
-import 'package:marche_social_app/view/screens/auth/register/registeration_options.dart';
-import 'package:marche_social_app/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
-import 'package:marche_social_app/view/screens/checkout_firsttime/proceed_checkout.dart';
-import 'package:marche_social_app/view/screens/launch/splash_screen.dart';
-import 'package:marche_social_app/view/screens/review/single_product_review.dart';
-import 'package:marche_social_app/view/screens/settings/settings.dart';
-import 'package:marche_social_app/view/screens/sidemenu/edit_profile.dart';
-import 'package:marche_social_app/view/screens/sidemenu/my_orders.dart';
-import 'package:marche_social_app/view/screens/review/review.dart';
-import 'package:marche_social_app/view/screens/single_product_checkout/single_product_checkount.dart';
-import 'package:marche_social_app/view/screens/wallet/e_wallet.dart';
 
 import 'config/theme/light_theme.dart';
 
@@ -33,7 +22,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
-      title: 'TITLE',
+      title: 'marche social',
       theme: lightTheme,
       themeMode: ThemeMode.light,
       defaultTransition: Transition.fadeIn,

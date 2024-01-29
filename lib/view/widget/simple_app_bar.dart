@@ -40,7 +40,11 @@ AppBar simpleAppBar({
                 )),
           ],
         ),
-        MyText(text: title),
+        MyText(
+          text: title,
+          size: 16,
+          weight: FontWeight.bold,
+        ),
         hasIcon == true
             ? const Row(
                 children: [

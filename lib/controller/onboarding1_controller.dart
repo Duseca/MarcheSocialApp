@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/controller/onboarding2_controller.dart';
-import 'package:marche_social_app/view/screens/on_boarding/on_boarding1_1.dart';
-import 'package:marche_social_app/view/screens/on_boarding/on_boarding1_2.dart';
-import 'package:marche_social_app/view/screens/on_boarding/on_boarding1_3.dart';
+import 'package:marche_social_app/view/screens/auth/on_boarding/on_boarding1_1.dart';
+import 'package:marche_social_app/view/screens/auth/on_boarding/on_boarding1_2.dart';
+import 'package:marche_social_app/view/screens/auth/on_boarding/on_boarding1_3.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

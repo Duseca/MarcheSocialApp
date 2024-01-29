@@ -6,8 +6,8 @@ import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile({super.key});
-
+  ProductTile({super.key, this.isgrid, this.haslike});
+  bool? isgrid, haslike;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -20,6 +20,8 @@ class ProductTile extends StatelessWidget {
               child: CommonImageView(
                 imagePath: Assets.imagesDummyproduct,
                 fit: BoxFit.cover,
+                height: 113,
+                width: 162,
                 radius: 20,
               ),
             ),
@@ -75,20 +77,22 @@ class ProductTile extends StatelessWidget {
                 color: kWhiteColor,
               )),
             )),
-        Positioned(
-            top: 10,
-            right: 10,
-            child: Container(
-              width: 30,
-              height: 30,
-              decoration: circle(
-                  kWhiteColor.withOpacity(0.5), kWhiteColor.withOpacity(0.5)),
-              child: Center(
-                  child: CommonImageView(
-                imagePath: Assets.imagesHeart,
-                height: 18,
-              )),
-            ))
+        haslike == false
+            ? SizedBox.shrink()
+            : Positioned(
+                top: 10,
+                right: isgrid == true ? 20 : 10,
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  decoration: circle(kWhiteColor.withOpacity(0.5),
+                      kWhiteColor.withOpacity(0.5)),
+                  child: Center(
+                      child: CommonImageView(
+                    imagePath: Assets.imagesHeart,
+                    height: 18,
+                  )),
+                ))
       ],
     );
   }

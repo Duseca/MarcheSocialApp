@@ -6,15 +6,12 @@ import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 
 class SendField extends StatelessWidget {
-  SendField({
-    Key? key,
-    this.controller,
-    this.onChanged,
-  }) : super(key: key);
+  SendField({Key? key, this.controller, this.onChanged, this.sendbtncolor})
+      : super(key: key);
 
   final TextEditingController? controller;
   final ValueChanged<String>? onChanged;
-
+  Color? sendbtncolor;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -80,7 +77,8 @@ class SendField extends StatelessWidget {
         ),
         Container(
           height: 30,
-          decoration: circle(KSecondaryColor, KSecondaryColor),
+          decoration: circle(
+              sendbtncolor ?? KSecondaryColor, sendbtncolor ?? KSecondaryColor),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: CommonImageView(

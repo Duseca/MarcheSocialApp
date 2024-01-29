@@ -73,7 +73,11 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Row(
                   children: [
-                    CustomCheckBox(isActive: true, onTap: () {}),
+                    CustomCheckBox(
+                      isActive: true,
+                      onTap: () {},
+                      iscircle: true,
+                    ),
                     MyText(
                       paddingLeft: 10,
                       text: 'Remember me',

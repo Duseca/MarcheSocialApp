@@ -37,6 +37,14 @@ class Assets {
   /// assets/fonts/Outfit-Thin.ttf
   static const String fontsOutfitThin = "assets/fonts/Outfit-Thin.ttf";
 
+  /// Assets for imagesAdd
+  /// assets/images/add.png
+  static const String imagesAdd = "assets/images/add.png";
+
+  /// Assets for imagesAnalytics
+  /// assets/images/analytics.png
+  static const String imagesAnalytics = "assets/images/analytics.png";
+
   /// Assets for imagesApple
   /// assets/images/apple.png
   static const String imagesApple = "assets/images/apple.png";
@@ -229,6 +237,10 @@ class Assets {
   /// assets/images/mic.png
   static const String imagesMic = "assets/images/mic.png";
 
+  /// Assets for imagesNext
+  /// assets/images/next.png
+  static const String imagesNext = "assets/images/next.png";
+
   /// Assets for imagesNotify
   /// assets/images/notify.png
   static const String imagesNotify = "assets/images/notify.png";
@@ -236,6 +248,10 @@ class Assets {
   /// Assets for imagesOrangeshoe
   /// assets/images/orangeshoe.png
   static const String imagesOrangeshoe = "assets/images/orangeshoe.png";
+
+  /// Assets for imagesOrders
+  /// assets/images/orders.png
+  static const String imagesOrders = "assets/images/orders.png";
 
   /// Assets for imagesPaypal
   /// assets/images/paypal.png
@@ -265,6 +281,10 @@ class Assets {
   /// assets/images/search.png
   static const String imagesSearch = "assets/images/search.png";
 
+  /// Assets for imagesSellermenu
+  /// assets/images/sellermenu.png
+  static const String imagesSellermenu = "assets/images/sellermenu.png";
+
   /// Assets for imagesSend
   /// assets/images/send.png
   static const String imagesSend = "assets/images/send.png";
@@ -289,9 +309,25 @@ class Assets {
   /// assets/images/shoe2.png
   static const String imagesShoe2 = "assets/images/shoe2.png";
 
+  /// Assets for imagesShoe3
+  /// assets/images/shoe3.png
+  static const String imagesShoe3 = "assets/images/shoe3.png";
+
+  /// Assets for imagesSneaker2
+  /// assets/images/sneaker2.png
+  static const String imagesSneaker2 = "assets/images/sneaker2.png";
+
+  /// Assets for imagesSneakers
+  /// assets/images/sneakers.png
+  static const String imagesSneakers = "assets/images/sneakers.png";
+
   /// Assets for imagesSports
   /// assets/images/sports.png
   static const String imagesSports = "assets/images/sports.png";
+
+  /// Assets for imagesStar2
+  /// assets/images/star2.png
+  static const String imagesStar2 = "assets/images/star2.png";
 
   /// Assets for imagesStore
   /// assets/images/store.png
@@ -340,5 +376,9 @@ class Assets {
   /// Assets for imagesWhiteshoe
   /// assets/images/whiteshoe.png
   static const String imagesWhiteshoe = "assets/images/whiteshoe.png";
+
+  /// Assets for imagesWithdrawal
+  /// assets/images/withdrawal.png
+  static const String imagesWithdrawal = "assets/images/withdrawal.png";
 }
 

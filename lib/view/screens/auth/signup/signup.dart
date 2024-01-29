@@ -33,7 +33,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               fieldLabel(),
               Row(
                 children: [
-                  CustomCheckBox(isActive: true, onTap: () {}),
+                  CustomCheckBox(
+                    isActive: true,
+                    onTap: () {},
+                    iscircle: true,
+                  ),
                   MyText(text: 'I accept the terms and privacy policy')
                 ],
               ),

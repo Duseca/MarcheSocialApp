@@ -20,6 +20,7 @@ class MyTextField extends StatelessWidget {
       this.haveLabel = true,
       this.labelSize,
       this.suffixIcon,
+      this.radius,
       this.prefixIcon})
       : super(key: key);
   String? label, hint;
@@ -27,7 +28,7 @@ class MyTextField extends StatelessWidget {
   TextEditingController? controller;
   ValueChanged<String>? onChanged;
   bool? isObSecure, haveLabel, isFilled;
-  double? marginBottom;
+  double? marginBottom, radius;
   int? maxLines;
   double? labelSize;
   Color? filledColor, hintColor;
@@ -68,11 +69,11 @@ class MyTextField extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderSide:
                     BorderSide(color: bordercolor ?? kGrey3Color, width: 1.5),
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(radius ?? 10.0),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: KTertiaryColor, width: 1.5),
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(radius ?? 10.0),
               ),
             ),
           ),

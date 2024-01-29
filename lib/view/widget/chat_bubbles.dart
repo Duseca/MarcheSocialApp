@@ -5,22 +5,23 @@ import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
 // ignore: must_be_immutable
 class ChatBubble extends StatelessWidget {
-  ChatBubble({
-    Key? key,
-    required this.isMe,
-    required this.otherUserImg,
-    required this.otherUserName,
-    this.time,
-    required this.date,
-    required this.msgTime,
-    required this.msg,
-    required this.myImg,
-  }) : super(key: key);
+  ChatBubble(
+      {Key? key,
+      required this.isMe,
+      required this.otherUserImg,
+      required this.otherUserName,
+      this.time,
+      required this.date,
+      required this.msgTime,
+      required this.msg,
+      required this.myImg,
+      this.bubblecolor})
+      : super(key: key);
 
   final String msg, otherUserName, otherUserImg, date, msgTime, myImg;
   final bool isMe;
   String? time;
-
+  Color? bubblecolor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -85,7 +86,7 @@ class ChatBubble extends StatelessWidget {
                 vertical: 10,
               ),
               decoration: BoxDecoration(
-                color: isMe ? KSecondaryColor : kWhiteColor,
+                color: isMe ? bubblecolor ?? KSecondaryColor : kWhiteColor,
                 borderRadius: isMe
                     ? BorderRadius.only(
                         topLeft: Radius.circular(10),

@@ -11,14 +11,16 @@ class NotificationsTile extends StatelessWidget {
       required this.path,
       required this.subtitle,
       required this.title,
-      required this.trailing});
+      required this.trailing,
+      this.tileColor});
   String path, title, subtitle;
   DateTime trailing;
+  Color? tileColor;
   @override
   Widget build(BuildContext context) {
     String formattedTime = TimeOfDay.now().format(context);
     return Container(
-      decoration: rounded2(KSecondaryColor.withOpacity(0.1)),
+      decoration: rounded2(tileColor ?? KSecondaryColor.withOpacity(0.1)),
       child: ListTile(
         leading: CommonImageView(
           imagePath: path,

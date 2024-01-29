@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
-import 'package:marche_social_app/view/screens/review/review.dart';
-import 'package:marche_social_app/view/screens/sidemenu/track_order.dart';
+import 'package:marche_social_app/view/screens/sidemenu/orders/review/review.dart';
+import 'package:marche_social_app/view/screens/sidemenu/orders/track_order.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 import 'package:marche_social_app/view/widget/star_rating.dart';
@@ -22,9 +22,12 @@ class Checkouttile extends StatelessWidget {
       this.isongoing,
       this.iscompleted,
       this.hasbg,
+      this.checckstatus,
+      this.status,
       this.issingle});
   String leading, title, subtitle1, subtitle2, color, size, qty;
-  bool? issingle, isongoing, iscompleted, hasbg;
+  String? status;
+  bool? issingle, isongoing, iscompleted, hasbg, checckstatus;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -253,7 +256,18 @@ class Checkouttile extends StatelessWidget {
                     )),
                   ),
                 ))
-            : Container()
+            : Container(),
+        checckstatus == true
+            ? Positioned(
+                bottom: 24,
+                right: 14,
+                child: MyText(
+                  size: 10,
+                  weight: FontWeight.bold,
+                  color: kRedColor,
+                  text: status ?? 'Status',
+                ))
+            : SizedBox.shrink()
       ],
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
-import 'package:marche_social_app/view/screens/checkout_firsttime/proceed_checkout.dart';
+import 'package:marche_social_app/view/screens/cart/checkout_firsttime/proceed_checkout.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';

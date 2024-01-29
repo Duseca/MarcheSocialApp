@@ -4,11 +4,13 @@ import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
-import 'package:marche_social_app/view/screens/settings/settings.dart';
+import 'package:marche_social_app/view/screens/bottom_nav_bar/seller_bottom_nav_bar.dart';
+import 'package:marche_social_app/view/screens/sidemenu/settings/settings.dart';
 import 'package:marche_social_app/view/screens/sidemenu/edit_profile.dart';
-import 'package:marche_social_app/view/screens/sidemenu/my_orders.dart';
-import 'package:marche_social_app/view/screens/wallet/e_wallet.dart';
-import 'package:marche_social_app/view/screens/wallet/wallet_payment.dart';
+import 'package:marche_social_app/view/screens/sidemenu/liked.dart';
+import 'package:marche_social_app/view/screens/sidemenu/orders/my_orders.dart';
+import 'package:marche_social_app/view/screens/sidemenu/wallet/e_wallet.dart';
+import 'package:marche_social_app/view/screens/sidemenu/wallet/wallet_payment.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
@@ -58,7 +60,9 @@ class _DrawermenuState extends State<Drawermenu> {
                       SizedBox(
                           width: 200,
                           child: MyButton(
-                            onTap: () {},
+                            onTap: () {
+                              Get.offAll(() => SellerBottomNavBar());
+                            },
                             buttonText: 'Switch to Seller',
                             radius: 50,
                           ))
@@ -95,7 +99,7 @@ class _DrawermenuState extends State<Drawermenu> {
                     ),
                   ),
                   menuTile('Liked', () {
-                    //Get.to(() => Privacy());
+                    Get.to(() => Liked());
                   }),
                   const Padding(
                     padding: AppSizes.HORIZONTAL,

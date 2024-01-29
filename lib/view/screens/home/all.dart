@@ -169,6 +169,28 @@ class _AllState extends State<All> {
                       ),
                     ],
                   ),
+                  // SizedBox(
+                  //   height: Get.height,
+                  //   child: Center(
+                  //     child: Padding(
+                  //       padding: const EdgeInsets.all(10),
+                  //       child: GridView.builder(
+                  //         physics: BouncingScrollPhysics(),
+                  //         padding: EdgeInsets.all(0),
+                  //         gridDelegate:
+                  //             SliverGridDelegateWithFixedCrossAxisCount(
+                  //                 mainAxisExtent: 245,
+                  //                 mainAxisSpacing: 20,
+                  //                 crossAxisCount: 2,
+                  //                 childAspectRatio: 0.8),
+                  //         itemCount: 10,
+                  //         itemBuilder: (context, index) {
+                  //           return ProductTile();
+                  //         },
+                  //       ),
+                  //     ),
+                  //   ),
+                  // )
                 ]),
           ),
         ],
