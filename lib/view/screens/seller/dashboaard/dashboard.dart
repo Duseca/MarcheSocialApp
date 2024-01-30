@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
+import 'package:marche_social_app/view/screens/seller/sidemenu_seller/drawer.dart';
 import 'package:marche_social_app/view/widget/custom_drop_down.dart';
 import 'package:marche_social_app/view/widget/main_bar.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 import 'package:marche_social_app/view/widget/product_tile.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
+  @override
+  State<Dashboard> createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        key: scaffoldKey,
+        drawer: Drawermenu(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             MainBar(
-              onmenuTap: () {},
+              onmenuTap: () {
+                scaffoldKey.currentState?.openDrawer();
+              },
               title: 'Dashboard',
             ),
             Padding(

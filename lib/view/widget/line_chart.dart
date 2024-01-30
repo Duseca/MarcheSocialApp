@@ -8,10 +8,16 @@ LineChartData sampleData1() {
   final Color gradientColor2 = Color.fromARGB(0, 255, 255, 255);
   return LineChartData(
     gridData: FlGridData(
-      show: false, drawVerticalLine: true,
+      show: true,
       drawHorizontalLine: true,
-      verticalInterval: 1, // Set the interval for vertical lines
-      horizontalInterval: 10,
+      horizontalInterval: 12, // Determines the spacing of the horizontal lines
+      getDrawingHorizontalLine: (value) {
+        // This function returns the style for drawing the horizontal lines
+        return FlLine(
+          color: kGrey1Color, // Set the color for the horizontal lines
+          strokeWidth: 1,
+        );
+      },
     ),
     titlesData: FlTitlesData(
       leftTitles: SideTitles(
@@ -34,11 +40,29 @@ LineChartData sampleData1() {
         },
       ),
     ),
-    borderData: FlBorderData(show: false),
+    borderData: FlBorderData(
+      show: true, // This should be true to show the border lines
+      border: Border(
+        bottom: BorderSide(
+          color: kGrey1Color,
+          width: 1,
+        ),
+        left: BorderSide(
+          color: Colors
+              .transparent, // Set left border to transparent if not needed
+        ),
+        right: BorderSide(
+          color: Colors.transparent,
+        ),
+        top: BorderSide(
+          color: Colors.transparent,
+        ),
+      ),
+    ),
     lineBarsData: [
       LineChartBarData(
         spots: [
-          FlSpot(0, 47), // Change these values accordingly
+          FlSpot(0, 47),
           FlSpot(1, 55),
           FlSpot(2, 55),
           FlSpot(2.5, 90),
@@ -47,28 +71,28 @@ LineChartData sampleData1() {
           FlSpot(4.5, 85),
           FlSpot(5, 72),
           FlSpot(5.5, 55),
-          FlSpot(6, 90),
-          FlSpot(7, 90),
-          FlSpot(7.4, 100)
+          FlSpot(6, 75),
+          FlSpot(7, 75),
+          FlSpot(7.4, 75),
+          FlSpot(7.8, 75),
+          FlSpot(8, 75),
+          FlSpot(8.7, 75),
         ],
         preventCurveOverShooting: true,
         preventCurveOvershootingThreshold: -10,
         isCurved: true,
         colors: [kWhiteColor],
         show: true,
-
         belowBarData: BarAreaData(
           show: true,
           colors: [
             gradientColor1,
             gradientColor2,
           ],
-
-          gradientFrom: Offset(0, 0), // Set to topCenter
+          gradientFrom: Offset(0, 0),
           gradientTo: Offset(0, 1),
         ),
-
-        dotData: FlDotData(show: false), // Hide the dots
+        dotData: FlDotData(show: false),
       ),
     ],
   );

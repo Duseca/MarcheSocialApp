@@ -89,6 +89,10 @@ class Assets {
   /// assets/images/camera.png
   static const String imagesCamera = "assets/images/camera.png";
 
+  /// Assets for imagesCancelled
+  /// assets/images/cancelled.png
+  static const String imagesCancelled = "assets/images/cancelled.png";
+
   /// Assets for imagesCard
   /// assets/images/card.png
   static const String imagesCard = "assets/images/card.png";
@@ -125,6 +129,10 @@ class Assets {
   /// assets/images/comment.png
   static const String imagesComment = "assets/images/comment.png";
 
+  /// Assets for imagesComments
+  /// assets/images/Comments.png
+  static const String imagesComments = "assets/images/Comments.png";
+
   /// Assets for imagesCopy
   /// assets/images/copy.png
   static const String imagesCopy = "assets/images/copy.png";
@@ -136,6 +144,10 @@ class Assets {
   /// Assets for imagesDelete
   /// assets/images/delete.png
   static const String imagesDelete = "assets/images/delete.png";
+
+  /// Assets for imagesDone
+  /// assets/images/done.png
+  static const String imagesDone = "assets/images/done.png";
 
   /// Assets for imagesDown
   /// assets/images/down.png
@@ -265,6 +277,10 @@ class Assets {
   /// assets/images/pic.png
   static const String imagesPic = "assets/images/pic.png";
 
+  /// Assets for imagesProgress
+  /// assets/images/progress.png
+  static const String imagesProgress = "assets/images/progress.png";
+
   /// Assets for imagesQrcode
   /// assets/images/qrcode.png
   static const String imagesQrcode = "assets/images/qrcode.png";
@@ -301,6 +317,10 @@ class Assets {
   /// assets/images/share.png
   static const String imagesShare = "assets/images/share.png";
 
+  /// Assets for imagesShare1
+  /// assets/images/Share1.png
+  static const String imagesShare1 = "assets/images/Share1.png";
+
   /// Assets for imagesShare2
   /// assets/images/share2.png
   static const String imagesShare2 = "assets/images/share2.png";
@@ -324,6 +344,14 @@ class Assets {
   /// Assets for imagesSneakers
   /// assets/images/sneakers.png
   static const String imagesSneakers = "assets/images/sneakers.png";
+
+  /// Assets for imagesSneakers3
+  /// assets/images/sneakers3.png
+  static const String imagesSneakers3 = "assets/images/sneakers3.png";
+
+  /// Assets for imagesSnipped
+  /// assets/images/snipped.png
+  static const String imagesSnipped = "assets/images/snipped.png";
 
   /// Assets for imagesSports
   /// assets/images/sports.png

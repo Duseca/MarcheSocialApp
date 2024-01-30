@@ -8,6 +8,8 @@ import 'package:marche_social_app/view/widget/my_text_field.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 import 'package:marche_social_app/view/widget/seller_color_selector.dart';
 import 'package:marche_social_app/view/widget/simple_app_bar.dart';
+import 'package:marche_social_app/view/widget/size_input_feild.dart';
+import 'package:marche_social_app/view/widget/tagsinput_feild.dart';
 
 class UploadProduct extends StatefulWidget {
   const UploadProduct({super.key});
@@ -102,14 +104,9 @@ class _UploadProductState extends State<UploadProduct> {
                 SizedBox(
                   height: 8,
                 ),
-                ColorSelectorWidget(),
+                SellerColorSelector(),
                 richtext('Size'),
-                SizedBox(
-                  height: 8,
-                ),
-                MyTextField(
-                  hint: 'Enter the size for your product',
-                ),
+                SizeInputField(),
                 richtext('Quantity'),
                 SizedBox(
                   height: 8,
@@ -141,9 +138,7 @@ class _UploadProductState extends State<UploadProduct> {
                 SizedBox(
                   height: 8,
                 ),
-                MyTextField(
-                  hint: 'Enter the keywords related to your product',
-                ),
+                TagsInputField(),
                 MyText(
                   text: 'Payment Options',
                   weight: FontWeight.bold,

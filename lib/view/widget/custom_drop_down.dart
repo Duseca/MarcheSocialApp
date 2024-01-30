@@ -15,6 +15,8 @@ class CustomDropDown extends StatelessWidget {
       this.bgColor,
       this.radius,
       this.width,
+      this.hintcolor,
+      this.iconscolor,
       this.bannerwith,
       this.height,
       this.borderColor});
@@ -23,7 +25,7 @@ class CustomDropDown extends StatelessWidget {
   String? selectedValue;
   final ValueChanged<dynamic>? onChanged;
   String heading, hint;
-  Color? bgColor, borderColor;
+  Color? bgColor, borderColor, hintcolor, iconscolor;
   double? radius, width, bannerwith, height;
 
   @override
@@ -61,10 +63,11 @@ class CustomDropDown extends StatelessWidget {
               hint: MyText(
                 text: hint,
                 size: 12,
-                color: kGrey3Color,
+                color: hintcolor ?? kGrey3Color,
               ),
               isDense: true,
               isExpanded: true,
+              iconEnabledColor: iconscolor ?? KTertiaryColor,
               buttonHeight: 36,
               buttonPadding: const EdgeInsets.symmetric(
                 horizontal: 15,
@@ -92,6 +95,7 @@ class CustomDropDown extends StatelessWidget {
               dropdownElevation: 4,
               scrollbarRadius: const Radius.circular(40),
               scrollbarThickness: 6,
+
               scrollbarAlwaysShow: true,
               offset: const Offset(-2, -5),
             ),

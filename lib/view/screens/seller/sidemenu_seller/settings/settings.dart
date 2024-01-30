@@ -9,6 +9,7 @@ import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/l
 import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/notifications_settings.dart';
 import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/payment_methods.dart';
 import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/privacy_policy.dart';
+import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/privacy_settings/privacy_settings.dart';
 import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/store_address.dart';
 import 'package:marche_social_app/view/screens/seller/sidemenu_seller/settings/terms_and_conditions.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
@@ -48,6 +49,9 @@ class _SettingsState extends State<Settings> {
                 }),
                 settingsTile('Languages', () {
                   Get.to(() => LanguagesSettings());
+                }),
+                settingsTile('Privacy Settings', () {
+                  Get.to(() => PrivacySettings());
                 }),
                 settingsTile('Store Address', () {
                   Get.to(() => StoreAddress());

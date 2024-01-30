@@ -4,6 +4,7 @@ import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/screens/seller/orders/orders_list.dart';
+import 'package:marche_social_app/view/screens/seller/sidemenu_seller/drawer.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/custom_drop_down.dart';
 import 'package:marche_social_app/view/widget/main_bar.dart';
@@ -12,18 +13,28 @@ import 'package:marche_social_app/view/widget/my_text_field.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 import 'package:marche_social_app/view/widget/order_status_tile.dart';
 
-class Orders extends StatelessWidget {
+class Orders extends StatefulWidget {
   const Orders({super.key});
 
+  @override
+  State<Orders> createState() => _OrdersState();
+}
+
+class _OrdersState extends State<Orders> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        key: scaffoldKey,
+        drawer: Drawermenu(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             MainBar(
-              onmenuTap: () {},
+              onmenuTap: () {
+                scaffoldKey.currentState?.openDrawer();
+              },
               title: 'My Orders',
             ),
             Padding(

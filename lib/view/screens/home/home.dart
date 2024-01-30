@@ -5,6 +5,7 @@ import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/screens/home/all.dart';
+import 'package:marche_social_app/view/screens/sidemenu/drawer.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_field.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
@@ -33,10 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
     Center(child: MyText(text: 'tab 1')),
     Center(child: MyText(text: 'tab 1')),
   ];
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        key: scaffoldKey,
+        drawer: Drawermenu(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -45,9 +49,14 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.menu,
-                    size: 40,
+                  InkWell(
+                    onTap: () {
+                      scaffoldKey.currentState?.openDrawer();
+                    },
+                    child: CommonImageView(
+                      imagePath: Assets.imagesHamburgermenu,
+                      height: 20,
+                    ),
                   ),
                   Row(
                     children: [

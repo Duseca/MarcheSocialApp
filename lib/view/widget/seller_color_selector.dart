@@ -1,144 +1,113 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
-import 'package:marche_social_app/constants/app_images/assets.dart';
-import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
+import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
-class ColorSelectorWidget extends StatefulWidget {
+class SellerColorSelector extends StatefulWidget {
   @override
-  _ColorSelectorWidgetState createState() => _ColorSelectorWidgetState();
+  _SellerColorSelectorState createState() => _SellerColorSelectorState();
 }
 
-class _ColorSelectorWidgetState extends State<ColorSelectorWidget> {
-  List<ColorData>?
-      selectedColors; // Use a List<ColorData>? to store multiple selections
-  List<ColorData> defaultColors = [
-    ColorData(name: 'White', color: Colors.white),
-    ColorData(name: 'Blue', color: Colors.blue),
-    ColorData(name: 'Black', color: Colors.black),
-    ColorData(name: 'Red', color: Colors.red),
-  ];
+class _SellerColorSelectorState extends State<SellerColorSelector> {
+  List<String> allColors = ['White', 'Black', 'Yellow', 'Green'];
+  List<String> moreColors = ['Blue', 'Red', 'Orange', 'Purple'];
+  List<String> selectedColors = [];
 
-  List<ColorData> moreColors = [
-    ColorData(name: 'Cyan', color: Colors.cyan),
-    ColorData(name: 'Teal', color: Colors.teal),
-    ColorData(name: 'Amber', color: Colors.amber),
-    ColorData(name: 'Indigo', color: Colors.indigo),
-    ColorData(name: 'Deep Purple', color: Colors.deepPurple),
-    ColorData(name: 'Green', color: Colors.green),
-    ColorData(name: 'Yellow', color: Colors.yellow),
-    ColorData(name: 'Orange', color: Colors.orange),
-    ColorData(name: 'Purple', color: Colors.purple),
-    ColorData(name: 'Pink', color: Colors.pink),
-    ColorData(name: 'Brown', color: Colors.brown),
-  ];
+  void toggleColorSelection(String color) {
+    setState(() {
+      if (selectedColors.contains(color)) {
+        selectedColors.remove(color);
+      } else {
+        selectedColors.add(color);
+      }
+    });
+  }
+
+  void addColor(String color) {
+    setState(() {
+      if (!allColors.contains(color)) {
+        allColors.add(color);
+        moreColors.remove(color); // Remove the color so it can't be added again
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'Selected Colors',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-        ),
-        Wrap(
-          spacing: 8.0,
-          runSpacing: 8.0,
-          children: [
-            ...defaultColors.map((colorData) => buildColorBox(colorData)),
-            ...selectedColors?.map((colorData) => buildColorBox(colorData)) ??
-                [],
-          ],
-        ),
-        buildAddMoreDropdown(),
-      ],
-    );
-  }
-
-  Widget buildColorBox(ColorData colorData) {
-    bool isSelected = selectedColors?.contains(colorData) ?? false;
-    return GestureDetector(
-      onTap: () {
-        toggleColorSelection(colorData);
-      },
-      child: Container(
-        width: 70,
-        height: 40,
-        margin: EdgeInsets.all(4),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.blue),
-          color: isSelected ? Colors.blue : Colors.transparent,
-          borderRadius: BorderRadius.circular(30),
-        ),
-        child: Center(
-          child: Text(
-            colorData.name,
-            style: TextStyle(
-              color: isSelected ? Colors.white : Colors.black,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildAddMoreDropdown() {
+    String? dropdownValue;
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: DropdownButton<ColorData>(
-        icon: Icon(
-          Icons.add,
-          color: kBlueColor,
-        ),
-        hint: Text('Add More'),
-        onChanged: (ColorData? value) {
-          if (value != null) {
-            addMoreColor(value);
-          }
-        },
-        dropdownColor: kWhiteColor,
-        items:
-            moreColors.map<DropdownMenuItem<ColorData>>((ColorData colorData) {
-          return DropdownMenuItem<ColorData>(
-            value: colorData,
-            child: Text(colorData.name),
-          );
-        }).toList(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Wrap(
+            spacing: 8.0,
+            children: allColors
+                .map((color) => InkWell(
+                      onTap: () => toggleColorSelection(color),
+                      child: Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Container(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: selectedColors.contains(color)
+                                ? Colors.blue
+                                : Colors.transparent,
+                            border: Border.all(
+                                color: selectedColors.contains(color)
+                                    ? Colors.blue
+                                    : Colors.grey),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            color,
+                            style: TextStyle(
+                              color: selectedColors.contains(color)
+                                  ? Colors.white
+                                  : Colors.grey,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ))
+                .toList(),
+          ),
+          DropdownButton<String>(
+            hint: MyText(
+              text: 'Add More',
+              color: kBlueColor,
+              paddingRight: 10,
+              size: 14,
+            ),
+            value: dropdownValue,
+            icon: const Icon(
+              Icons.add,
+              color: kBlueColor,
+            ),
+            iconSize: 24,
+            dropdownColor: kWhiteColor,
+            elevation: 2,
+            style: const TextStyle(color: Colors.blue),
+            underline: Container(
+              height: 0,
+            ),
+            onChanged: (String? newValue) {
+              setState(() {
+                dropdownValue = newValue;
+                if (newValue != null) {
+                  addColor(newValue);
+                }
+              });
+            },
+            items: moreColors.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+          ),
+        ],
       ),
     );
   }
-
-  void toggleColorSelection(ColorData colorData) {
-    setState(() {
-      if (selectedColors == null) {
-        selectedColors = [colorData];
-      } else {
-        if (selectedColors!.contains(colorData)) {
-          selectedColors!.remove(colorData);
-        } else {
-          selectedColors!.add(colorData);
-        }
-      }
-    });
-  }
-
-  void addMoreColor(ColorData colorData) {
-    setState(() {
-      if (selectedColors == null) {
-        selectedColors = [colorData];
-      } else {
-        selectedColors!.add(colorData);
-      }
-    });
-  }
-}
-
-class ColorData {
-  final String name;
-  final Color color;
-
-  ColorData({required this.name, required this.color});
 }
