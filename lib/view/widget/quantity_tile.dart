@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:input_quantity/input_quantity.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
+import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
@@ -75,14 +76,17 @@ class QuantityTile extends StatelessWidget {
                               children: [
                                 MyText(
                                   text: subtitle1,
-                                  color: kRedColor,
-                                  size: 16,
+                                  color: KTertiaryColor,
+                                  size: 18,
+                                  fontFamily: AppFonts.OSWALD,
                                   weight: FontWeight.w600,
                                 ),
                                 MyText(
                                   text: subtitle2,
                                   color: kGrey3Color,
                                   paddingLeft: 5,
+                                  fontFamily: AppFonts.OSWALD,
+                                  size: 14,
                                   weight: FontWeight.w600,
                                 ),
                                 MyText(

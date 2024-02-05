@@ -56,6 +56,10 @@ flutter:
           weight: 800
         - asset: assets/fonts/Outfit-Black.ttf
           weight: 900
+    - family: Oswald
+      fonts:
+        - asset: assets/fonts/Oswald-SemiBold.ttf
+          weight: 700
 
 flutter_assets:
   assets_path: assets/

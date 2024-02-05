@@ -139,36 +139,7 @@ class _AllState extends State<All> {
                       ),
                     ],
                   ),
-                  MyText(
-                    paddingTop: 20,
-                    text: 'Single Products',
-                    size: 14,
-                    weight: FontWeight.bold,
-                    paddingBottom: 20,
-                    paddingLeft: 20,
-                  ),
-                  Row(
-                    children: [
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 235, // Set a fixed height for the container
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            physics: const BouncingScrollPhysics(),
-                            itemCount:
-                                10, // Replace with the actual number of items
-                            itemBuilder: (context, index) {
-                              return ProductTile();
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+
                   // SizedBox(
                   //   height: Get.height,
                   //   child: Center(

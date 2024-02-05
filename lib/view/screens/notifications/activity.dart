@@ -12,19 +12,19 @@ class Activity extends StatelessWidget {
       NotificationsTile(
         path: Assets.imagesFire,
         subtitle: 'Your Post is Trending in the Popular Section',
-        title: 'title',
+        title: 'Trending Products',
         trailing: DateTime.now().subtract(Duration(days: 21)),
       ),
       NotificationsTile(
         path: Assets.imagesLike,
         subtitle: 'Your Post is Trending in the Popular Section',
-        title: 'title',
+        title: 'Trending Products',
         trailing: DateTime.now().subtract(Duration(days: 1)),
       ),
       NotificationsTile(
         path: Assets.imagesComment,
         subtitle: 'Your Post is Trending in the Popular Section',
-        title: 'title',
+        title: 'Trending Products',
         trailing: DateTime.now().subtract(Duration(days: 1)),
       ),
     ];

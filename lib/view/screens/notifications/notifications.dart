@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
+import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/screens/notifications/activity.dart';
 import 'package:marche_social_app/view/screens/notifications/messages.dart';
 import 'package:marche_social_app/view/screens/sidemenu/drawer.dart';
@@ -71,9 +72,7 @@ class _NotificationsState extends State<Notifications> {
               child: Container(
                 height: 50.87,
                 width: 400,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: kWhiteColor),
+                decoration: rounded(kPrimaryColor),
                 child: Row(
                   children: List.generate(
                     _tabs.length,

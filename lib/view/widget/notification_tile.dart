@@ -20,12 +20,12 @@ class NotificationsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     String formattedTime = TimeOfDay.now().format(context);
     return Container(
-      decoration: rounded2(tileColor ?? KSecondaryColor.withOpacity(0.1)),
+      decoration: rounded2(tileColor ?? kWhiteColor.withOpacity(0.9)),
       child: ListTile(
-        leading: CommonImageView(
-          imagePath: path,
-          height: 50,
-        ),
+        // leading: CommonImageView(
+        //   imagePath: path,
+        //   height: 50,
+        // ),
         title: MyText(
           text: title,
           weight: FontWeight.w500,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
+import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/screens/sidemenu/orders/review/review.dart';
 import 'package:marche_social_app/view/screens/sidemenu/orders/track_order.dart';
@@ -132,14 +133,17 @@ class Checkouttile extends StatelessWidget {
                                         children: [
                                           MyText(
                                             text: subtitle1,
-                                            color: kRedColor,
-                                            size: 16,
+                                            color: KTertiaryColor,
+                                            fontFamily: AppFonts.OSWALD,
+                                            size: 18,
                                             weight: FontWeight.w600,
                                           ),
                                           MyText(
                                             text: subtitle2,
+                                            fontFamily: AppFonts.OSWALD,
                                             color: kGrey3Color,
                                             weight: FontWeight.w600,
+                                            size: 14,
                                           ),
                                         ],
                                       ),
@@ -193,8 +197,9 @@ class Checkouttile extends StatelessWidget {
                                   paddingTop: 50,
                                   textAlign: TextAlign.end,
                                   text: '€68',
-                                  color: kRedColor,
-                                  size: 16,
+                                  color: KTertiaryColor,
+                                  fontFamily: AppFonts.OSWALD,
+                                  size: 18,
                                   weight: FontWeight.bold,
                                 ),
                                 MyText(
@@ -202,6 +207,7 @@ class Checkouttile extends StatelessWidget {
                                   paddingRight: 10,
                                   textAlign: TextAlign.end,
                                   text: '€68',
+                                  fontFamily: AppFonts.OSWALD,
                                   color: kGrayColor,
                                   size: 8,
                                 ),
