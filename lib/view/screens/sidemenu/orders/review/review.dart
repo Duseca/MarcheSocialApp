@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
+import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/widget/checkout_tile.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
@@ -26,14 +27,18 @@ class Review extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               physics: const BouncingScrollPhysics(),
               children: [
-                Checkouttile(
-                    color: 'Black',
-                    leading: Assets.imagesDummyproduct2,
-                    qty: '01',
-                    size: '41',
-                    subtitle1: '€ 270',
-                    subtitle2: '  € 400',
-                    title: 'Cocooil Body Oil'),
+                Container(
+                  decoration: rounded(kWhiteColor),
+                  child: Checkouttile(
+                      color: 'Black',
+                      leading: Assets.imagesDummyproduct2,
+                      qty: '01',
+                      size: '41',
+                      subtitle1: '€ 270',
+                      issingle: true,
+                      subtitle2: '  € 400',
+                      title: 'Cocooil Body Oil'),
+                ),
                 MyText(
                   text: 'How was your Order?',
                   textAlign: TextAlign.center,
@@ -52,8 +57,8 @@ class Review extends StatelessWidget {
                 ),
                 Center(
                   child: StarRating(
-                    rating: 4,
-                    size: 50,
+                    rating: 4.4,
+                    size: 20,
                   ),
                 ),
                 SizedBox(

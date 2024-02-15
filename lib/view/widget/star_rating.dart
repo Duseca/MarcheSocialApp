@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
+import 'package:marche_social_app/constants/app_images/assets.dart';
+import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 
 class StarRating extends StatelessWidget {
   final double rating;
@@ -18,25 +20,30 @@ class StarRating extends StatelessWidget {
       children: List.generate(starCount, (index) {
         if (index < fullStars) {
           // Full star
-          return Icon(
-            Icons.star_rate_rounded,
-            size: size,
-            color: kYellowColor,
+          return Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: CommonImageView(
+              imagePath: Assets.imagesStar3,
+              fit: BoxFit.contain,
+              width: size,
+              height: size,
+            ),
           );
         } else if (index == fullStars && remainingRating > 0) {
           // Partial star
-          return Icon(
-            Icons.star_half_rounded,
-            size: size,
-            color: kYellowColor,
+          return Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: CommonImageView(
+              imagePath: Assets.imagesHalf2,
+              height: size,
+              width: size,
+            ),
           );
         } else {
           // Empty star
-          return Icon(
-            Icons.star_rate_rounded,
-            weight: 0.25,
-            size: size,
-            color: kGrayColor,
+          return Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: Icon(null),
           );
         }
       }),

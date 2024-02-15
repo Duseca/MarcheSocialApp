@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for fontsOswaldSemiBold
+  /// assets/fonts/Oswald-SemiBold.ttf
+  static const String fontsOswaldSemiBold = "assets/fonts/Oswald-SemiBold.ttf";
+
   /// Assets for fontsOutfitBlack
   /// assets/fonts/Outfit-Black.ttf
   static const String fontsOutfitBlack = "assets/fonts/Outfit-Black.ttf";
@@ -201,6 +205,14 @@ class Assets {
   /// assets/images/greentick.png
   static const String imagesGreentick = "assets/images/greentick.png";
 
+  /// Assets for imagesHalf
+  /// assets/images/half.png
+  static const String imagesHalf = "assets/images/half.png";
+
+  /// Assets for imagesHalf2
+  /// assets/images/half2.png
+  static const String imagesHalf2 = "assets/images/half2.png";
+
   /// Assets for imagesHalfstar
   /// assets/images/halfstar.png
   static const String imagesHalfstar = "assets/images/halfstar.png";
@@ -357,9 +369,17 @@ class Assets {
   /// assets/images/sports.png
   static const String imagesSports = "assets/images/sports.png";
 
+  /// Assets for imagesStar
+  /// assets/images/star.png
+  static const String imagesStar = "assets/images/star.png";
+
   /// Assets for imagesStar2
   /// assets/images/star2.png
   static const String imagesStar2 = "assets/images/star2.png";
+
+  /// Assets for imagesStar3
+  /// assets/images/star3.png
+  static const String imagesStar3 = "assets/images/star3.png";
 
   /// Assets for imagesStore
   /// assets/images/store.png

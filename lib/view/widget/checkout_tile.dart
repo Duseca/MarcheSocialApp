@@ -34,7 +34,9 @@ class Checkouttile extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4.0),
+          padding: issingle == true
+              ? EdgeInsets.symmetric(vertical: 0, horizontal: 5)
+              : EdgeInsets.symmetric(vertical: 4),
           child: Container(
             decoration: issingle == true
                 ? hasbg == true
@@ -80,7 +82,10 @@ class Checkouttile extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
                                         children: [
-                                          StarRating(rating: 4),
+                                          StarRating(
+                                            rating: 4.5,
+                                            size: 10,
+                                          ),
                                           MyText(
                                             text: '  4.7  ',
                                             size: 10,
