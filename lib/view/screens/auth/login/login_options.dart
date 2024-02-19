@@ -5,20 +5,21 @@ import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/view/screens/auth/login/login.dart';
+import 'package:marche_social_app/view/screens/auth/login/login_with_phone.dart';
 import 'package:marche_social_app/view/screens/auth/signup/register_with_phone-number.dart';
 import 'package:marche_social_app/view/screens/auth/signup/signup.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
-class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({super.key});
+class LoginOptions extends StatefulWidget {
+  const LoginOptions({super.key});
 
   @override
-  State<RegistrationScreen> createState() => _RegistrationScreenState();
+  State<LoginOptions> createState() => _LoginOptionsState();
 }
 
-class _RegistrationScreenState extends State<RegistrationScreen> {
+class _LoginOptionsState extends State<LoginOptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +52,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                   MyButton(
                     onTap: () {
-                      Get.to(() => RegisterWithPhoneNumber());
+                      Get.to(() => LoginwithPhone());
                     },
                     radius: 50,
                     fontColor: KTertiaryColor,
@@ -82,7 +83,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ),
                   ),
                   MyButton(
-                    onTap: () {},
+                    onTap: () {
+                      //  Get.to(() => SignUpScreen());
+                    },
                     radius: 50,
                     isleft: true,
                     fontColor: KTertiaryColor,
@@ -98,7 +101,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                   MyButton(
                     onTap: () {
-                      Get.to(() => SignUpScreen());
+                      Get.to(() => LoginScreen());
                     },
                     radius: 50,
                     isleft: true,

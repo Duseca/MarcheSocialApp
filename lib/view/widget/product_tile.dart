@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
+import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
@@ -36,8 +37,8 @@ class ProductTile extends StatelessWidget {
                 Row(
                   children: [
                     CommonImageView(
-                      imagePath: Assets.imagesHalfstar,
-                      height: 20,
+                      imagePath: Assets.imagesStar3,
+                      height: 10,
                     ),
                     MyText(
                       text: '4.9 | ',
@@ -57,7 +58,7 @@ class ProductTile extends StatelessWidget {
                 MyText(
                   text: '\$68',
                   size: 20,
-                  color: kRedColor,
+                  fontFamily: AppFonts.OSWALD,
                   weight: FontWeight.bold,
                 ),
               ],

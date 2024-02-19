@@ -132,7 +132,10 @@ class _AllState extends State<All> {
                                   onTap: () {
                                     Get.to(() => ProductOverview());
                                   },
-                                  child: ProductTile());
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ProductTile(),
+                                  ));
                             },
                           ),
                         ),

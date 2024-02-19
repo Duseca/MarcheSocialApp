@@ -12,7 +12,7 @@ class LanguageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: simpleAppBar(context: context, title: ''),
+      appBar: simpleAppBar(context: context, title: '', bgColor: kPrimaryColor),
       backgroundColor: kPrimaryColor,
       body: Padding(
         padding: AppSizes.DEFAULT,

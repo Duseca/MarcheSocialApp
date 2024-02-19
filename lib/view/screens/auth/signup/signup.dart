@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_fonts.dart';
+import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
+import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/custom_check_box.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_field.dart';
@@ -25,12 +27,73 @@ class _SignUpScreenState extends State<SignUpScreen> {
           padding: AppSizes.DEFAULT,
           child: Column(
             children: [
-              MyText(text: 'Sign up'),
-              MyText(text: 'Please Enter your details to continue'),
-              fieldLabel(),
-              fieldLabel(),
-              fieldLabel(),
-              fieldLabel(),
+              Row(
+                children: [
+                  MyText(
+                    paddingTop: 30,
+                    text: 'Sign up',
+                    size: 24,
+                    weight: FontWeight.bold,
+                    paddingBottom: 10,
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  MyText(
+                    text: 'Please Enter your details to continue',
+                    paddingBottom: 80,
+                    size: 16,
+                    weight: FontWeight.w200,
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  MyText(
+                    text: 'Email',
+                    paddingBottom: 5,
+                    size: 14,
+                  ),
+                ],
+              ),
+              MyTextField(),
+              Row(
+                children: [
+                  MyText(
+                    text: 'Create a Password',
+                    size: 14,
+                    paddingBottom: 5,
+                  ),
+                ],
+              ),
+              MyTextField(
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: CommonImageView(
+                    imagePath: Assets.imagesHide,
+                    height: 16,
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  MyText(
+                    text: 'Confirm Password',
+                    paddingBottom: 5,
+                    size: 14,
+                  ),
+                ],
+              ),
+              MyTextField(
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: CommonImageView(
+                    imagePath: Assets.imagesHide,
+                    height: 16,
+                  ),
+                ),
+              ),
               Row(
                 children: [
                   CustomCheckBox(

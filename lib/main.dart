@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:marche_social_app/controller/onboarding1_controller.dart';
+import 'package:marche_social_app/controller/onboarding2_controller.dart';
 
 import 'config/theme/light_theme.dart';
 
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
       //initialRoute: AppLinks.splash_screen,
       // getPages: AppRoutes.pages,
-      home: OnBoardingController1(),
+      home: OnBoardingController2(),
     );
   }
 }

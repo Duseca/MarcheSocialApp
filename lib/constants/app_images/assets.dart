@@ -185,6 +185,10 @@ class Assets {
   /// assets/images/fashion.png
   static const String imagesFashion = "assets/images/fashion.png";
 
+  /// Assets for imagesFilter
+  /// assets/images/filter.png
+  static const String imagesFilter = "assets/images/filter.png";
+
   /// Assets for imagesFire
   /// assets/images/fire.png
   static const String imagesFire = "assets/images/fire.png";
@@ -228,6 +232,10 @@ class Assets {
   /// Assets for imagesHeart2
   /// assets/images/heart2.png
   static const String imagesHeart2 = "assets/images/heart2.png";
+
+  /// Assets for imagesHide
+  /// assets/images/hide.png
+  static const String imagesHide = "assets/images/hide.png";
 
   /// Assets for imagesHome2
   /// assets/images/Home2.png
