@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
+import 'package:marche_social_app/view/screens/auth/login/login_options.dart';
 import 'package:marche_social_app/view/screens/auth/register/registeration_options.dart';
+import 'package:marche_social_app/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 
@@ -64,7 +66,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 40,
                 ),
                 MyButton(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => LoginOptions());
+                  },
                   buttonText: 'Login',
                   backgroundColor: KSecondaryColor,
                   fontColor: kWhiteColor,
@@ -92,7 +96,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 MyText(
                   text: 'Continue as Guest',
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => BottomNavBar());
+                  },
                   fontFamily: AppFonts.OUTFit_DISPLAY,
                   size: 16,
                   color: kBlueColor,

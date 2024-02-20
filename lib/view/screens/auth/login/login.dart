@@ -4,6 +4,7 @@ import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/view/screens/auth/login/forget_pasword.dart';
+import 'package:marche_social_app/view/screens/auth/register/registeration_options.dart';
 import 'package:marche_social_app/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:marche_social_app/view/widget/common_image_view_widget.dart';
 import 'package:marche_social_app/view/widget/custom_check_box.dart';
@@ -121,7 +122,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.black.withOpacity(0.7)),
                 MyText(
                   text: 'Register',
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => RegistrationScreen());
+                  },
                 )
               ],
             ),

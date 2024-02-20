@@ -69,10 +69,10 @@ class _CartState extends State<Cart> {
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: QuantityTile(
-                        leading: Assets.imagesDummyproduct2,
+                        leading: Assets.imagesShoe,
                         subtitle1: '115 €',
                         subtitle2: '12 €  ',
-                        title: 'Cocooil Body Oil',
+                        title: 'Sneaker Shoes',
                       ),
                     ),
                 ],

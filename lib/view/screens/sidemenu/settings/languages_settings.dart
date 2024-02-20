@@ -55,27 +55,35 @@ class _LanguagesSettingsState extends State<LanguagesSettings> {
                         itemCount: 3,
                         itemBuilder: (context, index) {
                           final language = reasons[index];
-                          return ListTile(
-                            trailing: Container(
-                                height: 20,
-                                width: 20,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border:
-                                        Border.all(width: 4, color: kGrayColor),
-                                    color: selectedLanguage == language
-                                        ? kBlueColor
-                                        : kGrayColor)),
-                            contentPadding: EdgeInsets.all(0),
-                            title: MyText(
-                              text: language,
-                              fontFamily: AppFonts.OUTFit_DISPLAY,
-                            ),
-                            onTap: () {
-                              setState(() {
-                                selectedLanguage = language;
-                              });
-                            },
+                          return Column(
+                            children: [
+                              ListTile(
+                                trailing: Container(
+                                    height: 20,
+                                    width: 20,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 4, color: kGrayColor),
+                                        color: selectedLanguage == language
+                                            ? kBlueColor
+                                            : kGrayColor)),
+                                contentPadding: EdgeInsets.all(0),
+                                title: MyText(
+                                  text: language,
+                                  fontFamily: AppFonts.OUTFit_DISPLAY,
+                                ),
+                                onTap: () {
+                                  setState(() {
+                                    selectedLanguage = language;
+                                  });
+                                },
+                              ),
+                              Divider(
+                                color: kGrayColor,
+                                height: 1,
+                              )
+                            ],
                           );
                         })),
                 MyText(
@@ -90,27 +98,35 @@ class _LanguagesSettingsState extends State<LanguagesSettings> {
                         itemCount: reasons.length - 3,
                         itemBuilder: (context, index) {
                           final language = reasons[index + 3];
-                          return ListTile(
-                            trailing: Container(
-                                height: 20,
-                                width: 20,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border:
-                                        Border.all(width: 4, color: kGrayColor),
-                                    color: selectedLanguage == language
-                                        ? kBlueColor
-                                        : kGrayColor)),
-                            contentPadding: EdgeInsets.all(0),
-                            title: MyText(
-                              text: language,
-                              fontFamily: AppFonts.OUTFit_DISPLAY,
-                            ),
-                            onTap: () {
-                              setState(() {
-                                selectedLanguage = language;
-                              });
-                            },
+                          return Column(
+                            children: [
+                              ListTile(
+                                trailing: Container(
+                                    height: 20,
+                                    width: 20,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 4, color: kGrayColor),
+                                        color: selectedLanguage == language
+                                            ? kBlueColor
+                                            : kGrayColor)),
+                                contentPadding: EdgeInsets.all(0),
+                                title: MyText(
+                                  text: language,
+                                  fontFamily: AppFonts.OUTFit_DISPLAY,
+                                ),
+                                onTap: () {
+                                  setState(() {
+                                    selectedLanguage = language;
+                                  });
+                                },
+                              ),
+                              Divider(
+                                color: kGrayColor,
+                                height: 1,
+                              )
+                            ],
                           );
                         })),
               ],

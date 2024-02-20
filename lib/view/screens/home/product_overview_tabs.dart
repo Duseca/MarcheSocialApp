@@ -73,6 +73,8 @@ class _ProductsOverviewTabsState extends State<ProductsOverviewTabs> {
                     ),
                     physics: const BouncingScrollPhysics(),
                     dividerColor: kGrey8Color,
+                    indicatorWeight: 3,
+                    labelPadding: EdgeInsets.all(0),
                     indicatorColor: KSecondaryColor,
                   ),
                 ],

@@ -26,7 +26,7 @@ class Feedbackk extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               children: [
                 MyText(
-                  text: 'MMarchè App Feedback',
+                  text: 'Marchè App Feedback',
                   weight: FontWeight.w600,
                   paddingBottom: 5,
                 ),

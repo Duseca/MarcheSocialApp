@@ -26,12 +26,12 @@ class _ProceedCheckoutState extends State<ProceedCheckout> {
       4,
       (index) => Checkouttile(
           color: 'Black',
-          leading: Assets.imagesDummyproduct,
+          leading: Assets.imagesShoe,
           qty: '01',
           size: '41',
           subtitle1: '€ 270',
           subtitle2: '  € 400',
-          title: 'Cocooil Body Oil'));
+          title: 'Sneaker Shoes'));
   @override
   Widget build(BuildContext context) {
     return Scaffold(

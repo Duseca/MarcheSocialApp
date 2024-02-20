@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/view/screens/auth/signup/otp_code_verification.dart';
+import 'package:marche_social_app/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
 import 'package:marche_social_app/view/widget/simple_app_bar.dart';
@@ -74,7 +75,7 @@ class LoginwithPhone extends StatelessWidget {
         child: MyButton(
           buttonText: 'Continue',
           onTap: () {
-            Get.to(() => OTPVerification());
+            Get.to(() => BottomNavBar());
           },
           radius: 50,
         ),

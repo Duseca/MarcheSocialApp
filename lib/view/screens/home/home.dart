@@ -86,7 +86,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     hint: 'Search',
                   ),
                   Container(
-                    height: 50,
                     decoration: rounded2(
                       KSecondaryColor.withOpacity(0.2),
                     ),

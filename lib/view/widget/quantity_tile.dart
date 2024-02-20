@@ -52,7 +52,7 @@ class QuantityTile extends StatelessWidget {
                         imagePath: leading,
                         height: 99,
                         width: 99,
-                        fit: BoxFit.contain,
+                        fit: BoxFit.cover,
                         radius: 10,
                       ),
                     ),

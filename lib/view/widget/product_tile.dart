@@ -82,7 +82,7 @@ class ProductTile extends StatelessWidget {
             ? SizedBox.shrink()
             : Positioned(
                 top: 10,
-                right: isgrid == true ? 20 : 10,
+                right: isgrid == true ? 30 : 12,
                 child: Container(
                   width: 30,
                   height: 30,

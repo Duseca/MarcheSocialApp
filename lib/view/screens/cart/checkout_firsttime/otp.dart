@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
 import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
+import 'package:marche_social_app/view/screens/cart/checkout_firsttime/other_details.dart';
 import 'package:marche_social_app/view/widget/my_button_widget.dart';
 import 'package:marche_social_app/view/widget/my_text_field.dart';
 import 'package:marche_social_app/view/widget/my_text_widget.dart';
@@ -13,6 +14,7 @@ class OTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhiteColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -70,7 +72,7 @@ class OTP extends StatelessWidget {
                             fontFamily: AppFonts.OUTFit_DISPLAY,
                             color: KTertiaryColor)),
                     TextSpan(
-                      text: ' Send Again ',
+                      text: ' Resend',
                       style: TextStyle(
                           fontFamily: AppFonts.OUTFit_DISPLAY,
                           color: KSecondaryColor,
@@ -87,10 +89,15 @@ class OTP extends StatelessWidget {
           Padding(
             padding: AppSizes.DEFAULT,
             child: MyButton(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => OtherDetails());
+              },
               buttonText: 'Continue',
               radius: 50,
             ),
+          ),
+          SizedBox(
+            height: 20,
           )
         ],
       ),
