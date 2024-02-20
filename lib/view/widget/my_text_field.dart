@@ -21,6 +21,8 @@ class MyTextField extends StatelessWidget {
       this.labelSize,
       this.suffixIcon,
       this.radius,
+      this.onTap,
+      this.focusNode,
       this.prefixIcon})
       : super(key: key);
   String? label, hint;
@@ -34,6 +36,8 @@ class MyTextField extends StatelessWidget {
   Color? filledColor, hintColor;
   Color? bordercolor;
   Widget? prefixIcon, suffixIcon;
+  VoidCallback? onTap;
+  FocusNode? focusNode;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,6 +46,8 @@ class MyTextField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           TextFormField(
+            focusNode: focusNode,
+            onTap: onTap ?? () {},
             maxLines: maxLines ?? 1,
             controller: controller,
             onChanged: onChanged,

@@ -37,7 +37,7 @@ class _CategorySelectorState extends State<ScrollCategorySelector> {
               });
             },
             child: Container(
-              width: 120,
+              width: 90,
               height: 30, // Define a fixed width for each item
               margin: EdgeInsets.symmetric(
                   horizontal: 4), // Add some spacing between items
