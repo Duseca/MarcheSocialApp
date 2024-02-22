@@ -179,12 +179,28 @@ class Invoice extends StatelessWidget {
                   ),
                   Container(
                     decoration: rounded2(kGrey1Color),
-                    height: 150,
                     child: Padding(
                       padding: AppSizes.DEFAULT,
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                MyText(
+                                  text: 'Shipping Method',
+                                  size: 14,
+                                  weight: FontWeight.w600,
+                                ),
+                                MyText(
+                                  text: 'Instant Shipping',
+                                  size: 14,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -198,6 +214,9 @@ class Invoice extends StatelessWidget {
                                   size: 14,
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -213,6 +232,9 @@ class Invoice extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -226,6 +248,9 @@ class Invoice extends StatelessWidget {
                                   size: 14,
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -249,6 +274,9 @@ class Invoice extends StatelessWidget {
                             ),
                           ]),
                     ),
+                  ),
+                  SizedBox(
+                    height: 50,
                   )
                 ],
               ),

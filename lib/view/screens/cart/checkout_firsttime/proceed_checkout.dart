@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marche_social_app/constants/app_colors.dart';
+import 'package:marche_social_app/constants/app_fonts.dart';
 import 'package:marche_social_app/constants/app_images/assets.dart';
 import 'package:marche_social_app/constants/app_sizes.dart';
 import 'package:marche_social_app/constants/app_styling.dart';
@@ -20,6 +21,7 @@ class ProceedCheckout extends StatefulWidget {
 }
 
 class _ProceedCheckoutState extends State<ProceedCheckout> {
+  String selectmethod = '';
   final controller =
       PageController(viewportFraction: 1.0); // Changed to 1.0 for full width
   final pages = List.generate(
@@ -120,6 +122,20 @@ class _ProceedCheckoutState extends State<ProceedCheckout> {
                 ),
                 SizedBox(
                   height: 20,
+                ),
+                MyText(
+                  text: 'Delivery',
+                  weight: FontWeight.bold,
+                ),
+                radioTile('Instant Delivery', 'Instant Delivery'),
+                Divider(
+                  color: kGrey2Color,
+                ),
+                radioTile('Hand Delivery', 'Instant Delivery'),
+                radioTile('Mondial Relay', 'Instant Delivery'),
+                radioTile('LaPoste', 'Instant Delivery'),
+                SizedBox(
+                  height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -238,6 +254,39 @@ class _ProceedCheckoutState extends State<ProceedCheckout> {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget radioTile(String option, String title) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Container(
+        decoration: rounded3(kGrey1Color, kGrey2Color),
+        child: ListTile(
+          trailing: Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Container(
+                height: 20,
+                width: 20,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(width: 2, color: kGrey3Color),
+                    color: selectmethod == option ? kBlueColor : kGrayColor)),
+          ),
+          contentPadding: EdgeInsets.all(0),
+          title: MyText(
+            text: title,
+            size: 15,
+            paddingLeft: 10,
+            fontFamily: AppFonts.OUTFit_DISPLAY,
+          ),
+          onTap: () {
+            setState(() {
+              selectmethod = option;
+            });
+          },
+        ),
       ),
     );
   }

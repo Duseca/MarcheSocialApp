@@ -187,7 +187,54 @@ class _UploadProductState extends State<UploadProduct> {
                       selectedColor: kBlueColor,
                     ),
                     MyText(
-                      text: 'Wallet',
+                      text: 'LaPoste',
+                      paddingLeft: 10,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    CustomCheckBox(
+                      isActive: true,
+                      onTap: () {},
+                      selectedColor: kBlueColor,
+                    ),
+                    MyText(
+                      text: 'Mondial Relay',
+                      paddingLeft: 10,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    CustomCheckBox(
+                      isActive: true,
+                      onTap: () {},
+                      selectedColor: kBlueColor,
+                    ),
+                    MyText(
+                      text: 'Hand Delivery',
+                      paddingLeft: 10,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.add,
+                      color: kBlueColor,
+                    ),
+                    MyText(
+                      text: 'Add Another Shipping Method',
                       paddingLeft: 10,
                     )
                   ],
